@@ -7,7 +7,7 @@
 $(call inherit-product, device/xiaomi/dipper/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_dipper
@@ -21,3 +21,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
