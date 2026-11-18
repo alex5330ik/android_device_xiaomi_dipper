@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Zdroje na GitHubu -->
+    <remote name="muj_github" fetch="https://github.com/alex5330ik" />
+    <remote name="lineage" fetch="https://github.com/LineageOS" />
+    <remote name="poco" fetch="https://github.com/PocoF1-Resources" />
+    <remote name="muppets" fetch="https://github.com/TheMuppets" />
+
+    <!-- Tvoje upravené Device Trees -->
+    <project name="android_device_xiaomi_dipper" path="device/xiaomi/dipper" remote="muj_github" revision="lineage-23.2" />
+    <project name="android_device_xiaomi_sdm845-common" path="device/xiaomi/sdm845-common" remote="muj_github" revision="lineage-23.2" />
+
+    <!-- Jádro 4.19 -->
+    <project name="android_kernel_xiaomi_sdm845_419" path="kernel/xiaomi/sdm845" remote="poco" revision="16.2" />
+
+    <!-- Vendor Blobs -->
+    <project name="proprietary_vendor_xiaomi_sdm845-common" path="vendor/xiaomi/sdm845-common" remote="poco" revision="16.2" />
+    <project name="proprietary_vendor_xiaomi_dipper" path="vendor/xiaomi/dipper" remote="muppets" revision="lineage-22.2" />
+
+    <!-- Hardware HALs -->
+    <project name="android_hardware_xiaomi" path="hardware/xiaomi" remote="lineage" revision="lineage-23.2" />
+    <remove-project path="hardware/qcom-caf/sdm845/audio" />
+    <project name="android_hardware_qcom_audio" path="hardware/qcom-caf/sdm845/audio" remote="poco" revision="lineage-23.2-caf-sm8250" />
+</manifest>
